@@ -5,6 +5,7 @@ function LinksEditXBlock(runtime, element) {
       href1: $(element).find('input[name=href1]').val(),
       href2: $(element).find('input[name=href2]').val(),
       href3: $(element).find('input[name=href3]').val(),
+      href4: $(element).find('input[name=href3]').val(),  
     };
     $.post(handlerUrl, JSON.stringify(data)).done(function(response) {
     });
