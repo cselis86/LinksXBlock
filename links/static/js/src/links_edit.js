@@ -7,8 +7,13 @@ function LinksEditXBlock(runtime, element) {
       href3: $(element).find('input[name=href3]').val(),
       href4: $(element).find('input[name=href3]').val(),  
     };
-    $.post(handlerUrl, JSON.stringify(data)).done(function(response) {
-    });
+    if (data['href1']==''||data['href1'==null]){
+	alert('type something at href 1');
+    }
+    else{
+        $.post(handlerUrl, JSON.stringify(data)).done(function(response) {
+    }
+   });
   });
 
   $(element).find('.cancel-button').bind('click', function() {

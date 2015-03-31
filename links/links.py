@@ -20,6 +20,7 @@ class LinksXBlock(XBlock):
     href2 = String(help="Second URL", default=None, scope=Scope.content)
     href3 = String(help="Third URL", default=None, scope=Scope.content)
     href4 = String(help="Fourth URL", default=None, scope=Scope.content)
+    
     def resource_string(self, path):
         """Handy helper for getting resources from our kit."""
         data = pkg_resources.resource_string(__name__, path)
