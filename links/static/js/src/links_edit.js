@@ -8,8 +8,17 @@ function LinksEditXBlock(runtime, element) {
       href4: $(element).find('input[name=href3]').val(),  
     };
     if (data['href1']==''||data['href1'==null]){
-	alert('type something at href 1');
+	   alert('type something at Link 1');
     }
+    else if (data['href2']==''||data['href2'==null]){
+        alert('type something at Link 2');
+    }
+    else if (data['href3']==''||data['href3'==null]){
+        alert('type something at Link 3');
+    }
+    else if (data['href4']==''||data['href4'==null]){
+        alert('type something at Link 4');
+    }    
     else{
         $.post(handlerUrl, JSON.stringify(data)).done(function(response) {
     }
