@@ -9,6 +9,9 @@ function LinksEditXBlock(runtime, element) {
     };
 
     if (data.href1 === null ) {
+        window.alert('type something in link 1');
+    }
+    else {
         $.post(handlerUrl, JSON.stringify(data)).done(function(response) { });
     }
   
