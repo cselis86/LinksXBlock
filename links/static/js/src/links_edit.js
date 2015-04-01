@@ -8,11 +8,26 @@ function LinksEditXBlock(runtime, element) {
       href4: $(element).find('input[name=href4]').val(),  
     };
    
+   var isEmpty = false;
 
     if (data.href1 == "" ) {
         window.alert('type something in link 1');
+        isEmpty = true;
     }
-    else {
+    if (data.href2 == "" ) {
+        window.alert('type something in link 2');
+        isEmpty = true;
+    }
+    if (data.href3 == "" ) {
+        window.alert('type something in link 3');
+        isEmpty = true;
+    }
+    if (data.href4 == "" ) {
+        window.alert('type something in link 4');
+        isEmpty = true;
+    }
+    
+    if (!isEmpty) {
         $.post(handlerUrl, JSON.stringify(data)).done(function(response) { });
     }
   
