@@ -8,18 +8,15 @@ function LinksEditXBlock(runtime, element) {
       href4: $(element).find('input[name=href4]').val(),  
     };
    
-    /*
-    window.console.log(data.href1);
 
-    if (data.href1 === null ) {
+    if (data.href1 == "" ) {
         window.alert('type something in link 1');
     }
     else {
         $.post(handlerUrl, JSON.stringify(data)).done(function(response) { });
     }
-  */
   
-    $.post(handlerUrl, JSON.stringify(data)).done(function(response) { });
+//    $.post(handlerUrl, JSON.stringify(data)).done(function(response) { });
   
   });
 
