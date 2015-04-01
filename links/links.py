@@ -46,7 +46,7 @@ class LinksXBlock(XBlock):
         href1 = self.href1 or ''
         href2 = self.href2 or ''
         href3 = self.href3 or ''
-	href4 = self.href4 or ''
+	    href4 = self.href4 or ''
         frag = Fragment(html.format(href1=href1,href2=href2,href3=href3,href4=href4,self=self))
         frag.add_javascript(self.resource_string("static/js/src/links_edit.js"))
         frag.initialize_js('LinksEditXBlock')
