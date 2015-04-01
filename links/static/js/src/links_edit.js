@@ -7,6 +7,8 @@ function LinksEditXBlock(runtime, element) {
       href3: $(element).find('input[name=href3]').val(),
       href4: $(element).find('input[name=href3]').val(),  
     };
+    
+    window.console.log(data.href1);
 
     if (data.href1 === null ) {
         window.alert('type something in link 1');
