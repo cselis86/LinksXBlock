@@ -70,7 +70,7 @@ class LinksXBlock(XBlock):
         self.href1 = data['href1']
         self.href2 = data['href2']
         self.href3 = data['href3']
-	self.href4 = data['href4']
+	    self.href4 = data['href4']
 
         return {
             'result': 'success',
