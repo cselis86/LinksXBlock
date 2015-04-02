@@ -7,8 +7,17 @@ function LinksEditXBlock(runtime, element) {
       href3: $(element).find('input[name=href3]').val(),
       href4: $(element).find('input[name=href4]').val(),  
     };
+    
+    var token = $.inArray("",data);
+    
+    if (token >= 0 ){
+        window.alert('type something in link ' + token)
+    }
+    else {
+        $.post(handlerUrl, JSON.stringify(data)).done(function(response) { });
+    }
    
-   var isEmpty = false;
+   /*var isEmpty = false;
 
     if (data.href1 == "" ) {
         window.alert('type something in link 1');
@@ -30,8 +39,8 @@ function LinksEditXBlock(runtime, element) {
     if (!isEmpty) {
         $.post(handlerUrl, JSON.stringify(data)).done(function(response) { });
     }
-  
-//    $.post(handlerUrl, JSON.stringify(data)).done(function(response) { });
+  */
+
   
   });
 
